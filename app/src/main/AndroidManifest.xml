@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aviwe.pelebox">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".logoutSessions.PeleboxActivity"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:gravity="center"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MediPackClientActivity"
+            android:label=" Parcel Information"
+            android:icon="@drawable/logo"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientInformationActivity"
+            android:label="Parcel Information Details"
+            android:parentActivityName=".report.CollectedParcelActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".report.CollectedParcelActivity" />
+        </activity>
+        <activity
+            android:name=".bluetooth_scanner.BluetoothScannerActivity"
+            android:label="@string/title_activity_bluetooth_scanner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Scanin.ScanInParcelActivity"
+            android:label="SCANI IN"
+            android:parentActivityName=".MediPackClientActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+        <activity
+            android:name=".report.ScanoutReadyCollectionActivity"
+            android:label="Parcel Ready For Collection"
+            android:parentActivityName=".MediPackClientActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+        <activity
+            android:name=".Scanout.ScanOoutActivity"
+            android:label="SCAN OUT"
+            android:parentActivityName=".MediPackClientActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+        <activity
+            android:name=".report.ScanoutExpiredActivity"
+            android:label="Expired Parcel"
+            android:parentActivityName=".MediPackClientActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+        <activity
+            android:name=".search_parcel.SearchPatientActivity"
+            android:label="Search Patient"
+            android:parentActivityName=".Scanout.ScanOoutActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Scanout.ScanOoutActivity" />
+        </activity>
+        <activity
+            android:name=".ScanoutByAssistantActivity"
+            android:label="SCAN OUT"
+            android:parentActivityName=".search_parcel.SearchPatientActivity"
+            android:windowSoftInputMode="stateHidden">
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+        <activity
+            android:name=".report.CollectedParcelActivity"
+            android:label="Collected Parcels"
+            android:parentActivityName=".MediPackClientActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MediPackClientActivity" />
+        </activity>
+
+        <service
+            android:name=".MyServices"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".FilterActivity"></activity>
+
+        <activity android:name=".forgotPassword.RetrieveActivity"
+            android:label="Password Reset"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
+
+    </application>
+
+</manifest>

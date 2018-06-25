@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aviwe.pelebox.report.CollectedParcelActivity">
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=" Collected Parcels"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCount"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_button"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/parcel_ready_for_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="20dp">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Sort by:"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="70dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Age"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textStyle="bold" />
+
+                                    <RadioGroup
+                                        android:id="@+id/rgAge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <RadioButton
+                                            android:id="@+id/upto_17_search"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:onClick="checkButton"
+                                            android:text="0 to 17" />
+
+                                        <RadioButton
+                                            android:id="@+id/between_18_and_35_search"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:onClick="checkButton"
+                                            android:text="18 to 35" />
+
+                                        <RadioButton
+                                            android:id="@+id/betwen_36_to_65_search"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:onClick="checkButton"
+                                            android:text="36 to 65" />
+
+                                        <RadioButton
+                                            android:id="@+id/above65_search"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:onClick="checkButton"
+                                            android:text="Above 65" />
+
+                                        <RadioButton
+                                            android:id="@+id/all_age_search"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:onClick="checkButton"
+                                            android:text="All" />
+
+                                    </RadioGroup>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSearchData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/customedittext"
+                            android:padding="10dp"
+                            android:text="Search Records"
+                            android:textAllCaps="false"
+                            android:textColor="@color/button_color" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="70dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Sort by:"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Gender"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold" />
+
+                            <RadioGroup
+                                android:id="@+id/rgGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/rbMale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:onClick="checkedGender"
+                                    android:text="Male" />
+
+                                <RadioButton
+                                    android:id="@+id/rbFemale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:onClick="checkedGender"
+                                    android:text="Female" />
+
+                                <RadioButton
+                                    android:id="@+id/rgAllGender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:onClick="checkedGender"
+                                    android:text="All" />
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSearchGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/customedittext"
+                            android:padding="10dp"
+                            android:text="Search Records"
+                            android:textAllCaps="false"
+                            android:textColor="@color/button_color" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--</ScrollView>-->
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

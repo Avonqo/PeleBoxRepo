@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aviwe.pelebox.search_parcel.SearchPatientActivity">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="350dp">
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioGroup"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkButton"
+                    android:text="Id Number"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    tools:ignore="OnClick" />
+
+                <RadioButton
+                    android:id="@+id/radio_cellphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:onClick="checkButton"
+                    android:text="Cell Number"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <RadioButton
+                    android:id="@+id/radio_surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:onClick="checkButton"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Surname" />
+
+                <RadioButton
+                    android:id="@+id/radio_dOB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="13dp"
+                    android:onClick="checkButton"
+                    android:text="Date of Birth"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="540dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/round"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:layout_width="540dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/nhi"
+                android:background="@drawable/button_round_shape"
+                android:text="search"
+                android:textSize="20dp"
+                android:textColor="@color/button_color"
+                android:id="@+id/search"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true">-->
+
+    <!---->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:gravity="end"-->
+    <!--android:orientation="vertical">-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/parcel_ready_for_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardView2"
+        android:layout_marginTop="16dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+</LinearLayout>

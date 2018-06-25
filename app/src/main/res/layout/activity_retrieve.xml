@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_samples"
+    tools:context="com.example.aviwe.pelebox.MainActivity"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="100dp"
+            android:paddingTop="10dp"
+            android:layout_height="80dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_lock_black_24dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Request Password"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:layout_margin="20dp"
+            />
+
+        <EditText
+            android:id="@+id/txt_RequestPassword"
+            android:layout_width="500dp"
+            android:layout_height="70dp"
+            android:hint="Enter Email"
+            android:maxLines="1"
+            android:layout_margin="20dp"
+
+            android:textSize="30dp"
+            android:lines="1"
+            android:minLines="1"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/textview_round_shape"
+            android:layout_gravity="center"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/ic_email_black_24dp" />
+
+            <!--android:background="@color/editTextColor"-->
+            <!--android:drawableLeft="@drawable/ic_email_black_24dp"-->
+            <!--android:drawableTint="@color/buttoncolor"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:layout_gravity="center"/>-->
+
+        <!--<Button-->
+         <!---->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="Request Password"-->
+            <!--android:textSize="30dp"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:background="@drawable/button_round_shape"-->
+            <!--/>-->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Request Password"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_round_shape"
+            android:id="@+id/btn_requestPassword"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"/>
+
+
+            <!--android:padding="10dp"-->
+            <!--android:layout_margin="20dp"-->
+    </LinearLayout>
+
+
+</ScrollView>

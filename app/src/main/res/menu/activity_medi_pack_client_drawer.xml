@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Parcel_list"
+            android:icon="@drawable/ic_create_new_folder_black_24dp"
+            android:title="Uploaded Parcels " />
+        <item
+            android:id="@+id/Scan_in"
+            android:icon="@drawable/ic_archive_black_24dp"
+            android:title="Scan In" />
+        <item
+            android:id="@+id/Scan_out"
+            android:icon="@drawable/ic_unarchive_black_24dp"
+            android:title="Scan Out" />
+
+        <item
+            android:id="@+id/nav_searchparcel"
+            android:icon="@drawable/account_search"
+            android:title="Search Patient" />
+
+        <item android:title="REPORTS"
+      >
+            <menu>
+                <item
+                    android:id="@+id/ready_collection"
+                    android:icon="@drawable/ic_event_note_black_24dp"
+                    android:title="Parcel Ready For Collection" />
+                <item
+                    android:id="@+id/expired_collection"
+                    android:icon="@drawable/ic_event_note_black_24dp"
+                    android:title="Expired Parcels For Collection" />
+
+                <item
+                    android:id="@+id/scannedout_collection"
+                    android:icon="@drawable/ic_event_note_black_24dp"
+                    android:title="Collected Parcels" />
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Logout" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_aboutus"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="About Us" />-->
+
+            <!--<item-->
+                <!--android:id="@+id/nav_contactus"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Contact Us" />-->
+
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

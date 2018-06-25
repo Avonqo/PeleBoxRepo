@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtNamesurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aviwe Modise"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:textSize="15dip"
+           />
+
+        <TextView
+            android:id="@+id/txtID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNamesurname"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:layout_marginTop="1dip"
+            android:text="yhh679809955" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtID"
+            android:id="@+id/txtDueDate"
+            android:textSize="15dp"/>
+
+        <!-- Rightend Duration -->
+        <TextView
+            android:id="@+id/txtCellphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtID"
+            android:background="@drawable/ic_edit_black_24dp"
+            android:gravity="right"
+            android:textColor="#10bcc9"
+            android:textSize="15dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/duratin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/date"
+            android:layout_alignBottom="@+id/date"
+            android:layout_marginEnd="14dp"
+            android:layout_toStartOf="@+id/txtCellphone"
+            android:gravity="right"
+            android:textColor="#10bcc9"
+            android:background="@drawable/ic_close_black_24dp"
+            android:textSize="15dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtID"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/duratin"
+            android:gravity="right"
+            android:textColor="#10bcc9"
+            android:textSize="15dip"
+            android:background="@drawable/ic_check_black_24dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
